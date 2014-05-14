@@ -38,12 +38,12 @@ Swarm Client Startup Options
 Below is a list of environment variables that are mapped to the the swarm client options. Simply pass them to the container
 when you run.
 
-    JENKINS_MASTER_URL : -master
-    JENKINS_AUTODISC_ADDR : -autoDiscoveryAddress
-    JENKINS_EXECUTORS : -executors
-    JENKINS_LABELS : -labels
-    JENKINS_USERNAME : -username
-    JENKINS_PASSWORD : -password
+    JENKINS_MASTER_URL      : -master
+    JENKINS_AUTODISC_ADDR   : -autoDiscoveryAddress
+    JENKINS_EXECUTORS       : -executors
+    JENKINS_LABELS          : -labels
+    JENKINS_USERNAME        : -username
+    JENKINS_PASSWORD        : -password
     
 The autodiscovery will work if the slave is on the same network as the Jenkins master. The default configuration of Docker will
 prevent it from working if slave and master are on different Docker hosts. In this case you will need to pass in the environment
