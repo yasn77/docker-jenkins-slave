@@ -23,7 +23,7 @@ Services
   * Monit
   * SSHD
 
-Monit is used to control the start up and management of Jenkins slace (and SSHD). You can access the monit webserver
+Monit is used to control the start up and management of Jenkins slave (and SSHD). You can access the monit webserver
 by exposing port 2812 on the Docker host. The user name is `monit` and password can be found by running:
 
     docker logs <CONTAINER_ID> 2>/dev/null | grep MONIT_PASSWORD
