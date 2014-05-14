@@ -4,7 +4,7 @@ docker-jenkins-slave
 Docker Jenkins slave image using swarm plugin
 
     OS Base : Ubuntu 14.04
-    Jenkins Swar version :  1.15
+    Jenkins Swarm version :  1.15
     Exposed Ports : 2812 22
     Jenkins Home : /jenkins
     Timezone : Europe/London
