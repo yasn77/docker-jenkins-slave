@@ -1,0 +1,3 @@
+check process jenkins with pidfile /tmp/jenkins.pid
+       start program = "/jenkins_init_wrapper.sh start"
+       stop program  = "/jenkins_init_wrapper.sh stop"
