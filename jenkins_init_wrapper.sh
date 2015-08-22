@@ -8,7 +8,7 @@ then
   useradd -G monit,docker -s /bin/bash -d ${JENKINS_HOME} jenkins
 
   # Set Jenkins user password, so we can SSH
-  JENKINS_PASSWD=$(openssl rand -base64 6)
+  [ -z "$JENKINS_PASSWD" ] && JENKINS_PASSWD=$(openssl rand -base64 6)
   echo JENKINS_PASSWORD=${JENKINS_PASSWD}
   echo -e "${JENKINS_PASSWD}\n${JENKINS_PASSWD}" | passwd jenkins &>/dev/null
 fi

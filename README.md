@@ -15,6 +15,9 @@ Environment Variables
         Arguments to pass to Java when Jenkins starts. Default : '-Djava.awt.headless=true'
     JENKINS_SSH_PUBKEY
         SSH Public key that is added to Jenkins user authorized_keys file
+    JENKINS_PASSWD
+        By default, the Jenkins SSH account password is randomally generated,
+        however you can set this environment variable to set it yourself.
     TZ
         Container Timezone. Default 'Europe/London'
 
