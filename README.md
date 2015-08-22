@@ -3,7 +3,7 @@ docker-jenkins-slave
 
 Docker Jenkins slave image using swarm plugin and supports Docker in Docker
 
-    OS Base : Ubuntu 14.04
+    OS Base : jpetazzo/dind
     Jenkins Swarm version :  1.15
     Exposed Ports : 2812 22
     Jenkins Home : /jenkins
@@ -22,6 +22,7 @@ Services
 --------
 
   * Jenkins Slave
+  * Docker in Docker
   * Monit
   * SSHD
 
