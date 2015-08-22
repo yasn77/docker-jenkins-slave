@@ -18,4 +18,6 @@ sed -e "s/__MONIT_PASSWD__/$MONIT_PASSWD/" -i /etc/monit/conf.d/enable_monit_web
 
 sed -e 's/\(session.*pam_loginuid.so\)/\# \1/' -i /etc/pam.d/sshd
 
+/usr/local/bin/wrapdocker &
+
 /usr/bin/monit -I -g monit -v

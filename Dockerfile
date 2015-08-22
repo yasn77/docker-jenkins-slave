@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM jpetazzo/dind
 MAINTAINER Yasser Nabi "yassersaleemi@gmail.com"
 ENV JENKINS_HOME /jenkins
 ENV JENKINS_SWARM_CLIENT_VER 1.15

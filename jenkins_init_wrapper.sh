@@ -5,8 +5,8 @@ source /docker.env
 
 if ! id jenkins &>/dev/null
 then
-  useradd -G monit -s /bin/bash -d ${JENKINS_HOME} jenkins
-  
+  useradd -G monit,docker -s /bin/bash -d ${JENKINS_HOME} jenkins
+
   # Set Jenkins user password, so we can SSH
   JENKINS_PASSWD=$(openssl rand -base64 6)
   echo JENKINS_PASSWORD=${JENKINS_PASSWD}
