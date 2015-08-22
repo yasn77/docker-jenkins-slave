@@ -1,6 +1,6 @@
 #!/bin/bash
 
-env | egrep "^JENKINS|^TZ" > /docker.env
+env | sed -n 's#^\(JENKINS.*\|TZ\)=\(.*\)#\1="\2"#p' > /docker.env
 
 # Generate SSH host keys
 rm -f "/etc/ssh/ssh_host_key"
