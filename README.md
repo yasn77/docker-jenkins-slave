@@ -1,7 +1,7 @@
 docker-jenkins-slave
 ====================
 
-Docker Jenkins slave image using swarm plugin
+Docker Jenkins slave image using swarm plugin and supports Docker in Docker
 
     OS Base : Ubuntu 14.04
     Jenkins Swarm version :  1.15
@@ -13,6 +13,8 @@ Environment Variables
 ---------------------
     JENKINS_JAVA_ARGS
         Arguments to pass to Java when Jenkins starts. Default : '-Djava.awt.headless=true'
+    JENKINS_SSH_PUBKEY
+        SSH Public key that is added to Jenkins user authorized_keys file
     TZ
         Container Timezone. Default 'Europe/London'
 
@@ -44,7 +46,7 @@ when you run.
     JENKINS_LABELS          : -labels
     JENKINS_USERNAME        : -username
     JENKINS_PASSWORD        : -password
-    
+
 The autodiscovery will work if the slave is on the same network as the Jenkins master. The default configuration of Docker will
 prevent it from working if slave and master are on different Docker hosts. In this case you will need to pass in the environment
 variable ```JENKINS_MASTER_URL```

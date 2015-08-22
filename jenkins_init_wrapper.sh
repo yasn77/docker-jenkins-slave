@@ -13,6 +13,9 @@ then
   echo -e "${JENKINS_PASSWD}\n${JENKINS_PASSWD}" | passwd jenkins &>/dev/null
 fi
 
+mkdir -p ${JENKINS_HOME}/.ssh
+[ "${JENKINS_SSH_PUBKEY}" ] && echo "${JENKINS_SSH_PUBKEY}" >> ${JENKINS_HOME}/.ssh/authorized_keys
+
 chown -R jenkins ${JENKINS_HOME}
 
 OPTS="-fsroot ${JENKINS_HOME}"
