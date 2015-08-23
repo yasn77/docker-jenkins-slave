@@ -1,1 +1,2 @@
-jenkins ALL = NOPASSWD: /usr/bin/apt-get
+Defaults:jenkins !requiretty
+jenkins ALL = NOPASSWD: ALL
